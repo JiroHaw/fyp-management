@@ -3,9 +3,13 @@ package com.example.android_assignment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -106,5 +110,24 @@ public class StudentMainActivity extends AppCompatActivity {
                 startActivity(new Intent(StudentMainActivity.this, StudentMainActivity.class));
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_action_bar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.calculator:
+                startActivity(new Intent(StudentMainActivity.this, Calculator.class));
+                break;
+            case R.id.calendar:
+                Toast.makeText(this, "calendar", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

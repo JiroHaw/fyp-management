@@ -36,6 +36,9 @@ public class fetchPdf extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fetch_pdf);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         listView = findViewById(R.id.listView);
         uploads = new ArrayList<>();
 

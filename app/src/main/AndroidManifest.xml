@@ -20,9 +20,11 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".UploadPdf"
-            android:label="Upload"/>
+            android:label="Upload"
+            android:parentActivityName=".StudentMainActivity"/>
         <activity android:name=".fetchPdf"
-            android:label="List"/>
+            android:label="List"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".WorkActivity" />
         <activity android:name=".MarkActivity" />
         <activity android:name=".StudentMainActivity"/>
@@ -30,6 +32,12 @@
         <activity android:name=".StudentLogin"
             android:label="Student"/>
         <activity android:name=".StudentWork"/>
+        <activity
+            android:name=".Calculator"
+            android:label="Calculator" />
+        <activity
+            android:name=".Calendar"
+            android:label="Calendar" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"

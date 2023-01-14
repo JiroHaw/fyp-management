@@ -35,19 +35,16 @@
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape"
         android:backgroundTint="@color/black"
-        android:padding="12dp"
+        android:padding="16dp"
         android:text="Log Out"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -57,8 +54,8 @@
         android:layout_marginBottom="328dp"
         android:backgroundTint="@color/black"
         android:text="Upload FYP"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintStart_toStartOf="@+id/view3" />
@@ -70,8 +67,8 @@
         android:layout_marginBottom="252dp"
         android:backgroundTint="@color/black"
         android:text="Upload Proposal"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="@+id/upload"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,8 +83,8 @@
         android:layout_marginBottom="252dp"
         android:backgroundTint="@color/black"
         android:text="Upload Draft"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="@+id/upload"
         app:layout_constraintHorizontal_bias="0.0"
@@ -101,8 +98,8 @@
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
         android:text="Upload Proposal"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/upload3"
         app:layout_constraintStart_toStartOf="@+id/upload3"
         app:layout_constraintTop_toBottomOf="@+id/upload3" />
@@ -113,8 +110,8 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/black"
         android:text="Upload Presentation"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/upload4"
         app:layout_constraintStart_toStartOf="@+id/upload4"
         app:layout_constraintTop_toBottomOf="@+id/upload4" />
@@ -125,11 +122,12 @@
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
         android:text="Upload Post"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/upload5"
         app:layout_constraintStart_toStartOf="@+id/upload5"
         app:layout_constraintTop_toBottomOf="@+id/upload5" />
+
     <View
         android:id="@+id/nav"
         android:layout_width="match_parent"

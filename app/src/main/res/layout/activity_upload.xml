@@ -37,6 +37,7 @@
         android:layout_marginTop="28dp"
         android:backgroundTint="@color/black"
         android:text="Upload"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
