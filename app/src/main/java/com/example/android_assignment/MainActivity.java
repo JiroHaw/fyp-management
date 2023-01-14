@@ -22,19 +22,58 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        Button navMark = findViewById(R.id.navMark);
+        Button navHome = findViewById(R.id.navHome);
+        Button navWork = findViewById(R.id.navWork);
         Button download = findViewById(R.id.download);
+        Button download2 = findViewById(R.id.download2);
+        Button download3 = findViewById(R.id.download3);
+        Button download4 = findViewById(R.id.download4);
+        Button download5 = findViewById(R.id.download5);
+        Button download6 = findViewById(R.id.download6);
         Button logout = findViewById(R.id.logout);
-        Button upload = findViewById(R.id.upload);
 
         download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, fetchPdf.class));
+            }
+        });
+
+        download2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, fetchPdf.class));
+            }
+        });
+
+        download3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, fetchPdf.class));
+            }
+        });
+
+        download4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, fetchPdf.class));
+            }
+        });
+
+        download5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, fetchPdf.class));
+            }
+        });
+
+        download6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, fetchPdf.class));
@@ -54,28 +93,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, UploadPdf.class));
-            }
-        });
-
-        binding.navMark.setOnClickListener(new View.OnClickListener() {
+        navMark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, MarkActivity.class));
             }
         });
 
-        binding.navWork.setOnClickListener(new View.OnClickListener() {
+        navWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, WorkActivity.class));
             }
         });
 
-        binding.navHome.setOnClickListener(new View.OnClickListener() {
+        navHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, MainActivity.class));

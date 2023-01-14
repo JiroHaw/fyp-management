@@ -32,12 +32,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class StudentLogin extends AppCompatActivity {
 
     private EditText loginEmail, loginPassword;
-    private TextView signupRedirectText, studentLogin;
+    private TextView signupRedirectText, adminLogin;
     private Button loginButton;
-    private CheckBox remember;
+    private CheckBox remember1;
     private FirebaseAuth auth;
     GoogleSignInOptions gOptions;
     GoogleSignInClient gClient;
@@ -46,14 +46,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.student_login);
 
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        remember = findViewById(R.id.remember);
+        remember1 = findViewById(R.id.remember);
         signupRedirectText = findViewById(R.id.signUpRedirectText);
-        studentLogin = findViewById(R.id.studentLogin);
+        adminLogin = findViewById(R.id.adminLogin);
 
         auth = FirebaseAuth.getInstance();
 
@@ -70,14 +70,14 @@ public class LoginActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                        Toast.makeText(StudentLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(StudentLogin.this, StudentMainActivity.class));
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(StudentLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                     } else {
@@ -94,14 +94,14 @@ public class LoginActivity extends AppCompatActivity {
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+                startActivity(new Intent(StudentLogin.this, SignUpActivity.class));
             }
         });
 
-        studentLogin.setOnClickListener(new View.OnClickListener() {
+        adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, StudentLogin.class));
+                startActivity(new Intent(StudentLogin.this, LoginActivity.class));
             }
         });
 
@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
         GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
         if (gAccount != null) {
             finish();
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(StudentLogin.this, StudentMainActivity.class);
             startActivity(intent);
         }
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -125,10 +125,10 @@ public class LoginActivity extends AppCompatActivity {
                             try {
                                 task.getResult(ApiException.class);
                                 finish();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent intent = new Intent(StudentLogin.this, StudentMainActivity.class);
                                 startActivity(intent);
                             } catch (ApiException e) {
-                                Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(StudentLogin.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -138,26 +138,26 @@ public class LoginActivity extends AppCompatActivity {
         String checkbox = preferences.getString("remember", "");
 
         if (checkbox.equals("true")) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(StudentLogin.this, StudentMainActivity.class));
         } else {
             Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT).show();
         }
 
-        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        remember1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (compoundButton.isChecked()) {
                     SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("remember", "true");
+                    editor.putString("remember1", "true");
                     editor.apply();
-                    Toast.makeText(LoginActivity.this, "checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StudentLogin.this, "checked", Toast.LENGTH_SHORT).show();
                 } else if (!compoundButton.isChecked()) {
                     SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("remember", "false");
+                    editor.putString("remember1", "false");
                     editor.apply();
-                    Toast.makeText(LoginActivity.this, "unchecked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StudentLogin.this, "unchecked", Toast.LENGTH_SHORT).show();
                 }
             }
         });

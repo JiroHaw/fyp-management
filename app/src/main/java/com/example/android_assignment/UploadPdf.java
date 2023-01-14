@@ -35,6 +35,9 @@ public class UploadPdf extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         upload_btn = findViewById(R.id.upload_btn);
         pdf_name = findViewById(R.id.name);
 

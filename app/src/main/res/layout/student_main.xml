@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".StudentMainActivity">
 
     <View
         android:id="@+id/view3"
@@ -39,6 +39,7 @@
         android:backgroundTint="@color/black"
         android:padding="12dp"
         android:text="Log Out"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/view3"
@@ -48,77 +49,87 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.355" />
 
+
     <Button
-        android:id="@+id/download"
+        android:id="@+id/upload"
         android:layout_width="197dp"
         android:layout_height="50dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginBottom="328dp"
         android:backgroundTint="@color/black"
-        android:text="FYP List"
+        android:text="Upload FYP"
+        android:textColor="@color/white"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
+        app:layout_constraintStart_toStartOf="@+id/view3" />
 
     <Button
-        android:id="@+id/download2"
+        android:id="@+id/upload2"
         android:layout_width="197dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="252dp"
         android:backgroundTint="@color/black"
-        android:text="Proposal List"
+        android:text="Upload Proposal"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/download"
-        app:layout_constraintStart_toStartOf="@+id/download"
-        app:layout_constraintTop_toBottomOf="@+id/download" />
-
-    <Button
-        android:id="@+id/download3"
-        android:layout_width="197dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/black"
-        android:text="Draft List"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/download2"
-        app:layout_constraintStart_toStartOf="@+id/download2"
-        app:layout_constraintTop_toBottomOf="@+id/download2" />
-
-    <Button
-        android:id="@+id/download4"
-        android:layout_width="197dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/black"
-        android:text="Slide List"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/download3"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
+        app:layout_constraintEnd_toEndOf="@+id/upload"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/download3"
-        app:layout_constraintTop_toBottomOf="@+id/download3" />
+        app:layout_constraintStart_toStartOf="@+id/upload"
+        app:layout_constraintTop_toBottomOf="@+id/upload"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/download5"
+        android:id="@+id/upload3"
+        android:layout_width="197dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="252dp"
+        android:backgroundTint="@color/black"
+        android:text="Upload Draft"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
+        app:layout_constraintEnd_toEndOf="@+id/upload"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/upload"
+        app:layout_constraintTop_toBottomOf="@+id/upload2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/upload4"
         android:layout_width="197dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
-        android:text="Presentation List"
+        android:text="Upload Proposal"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/download4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/download4"
-        app:layout_constraintTop_toBottomOf="@+id/download4" />
+        app:layout_constraintEnd_toEndOf="@+id/upload3"
+        app:layout_constraintStart_toStartOf="@+id/upload3"
+        app:layout_constraintTop_toBottomOf="@+id/upload3" />
 
     <Button
-        android:id="@+id/download6"
+        android:id="@+id/upload5"
+        android:layout_width="197dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/black"
+        android:text="Upload Presentation"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/upload4"
+        app:layout_constraintStart_toStartOf="@+id/upload4"
+        app:layout_constraintTop_toBottomOf="@+id/upload4" />
+
+    <Button
+        android:id="@+id/upload6"
         android:layout_width="197dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
-        android:text="Poster List"
+        android:text="Upload Post"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/download5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/download5"
-        app:layout_constraintTop_toBottomOf="@+id/download5" />
-
-
+        app:layout_constraintEnd_toEndOf="@+id/upload5"
+        app:layout_constraintStart_toStartOf="@+id/upload5"
+        app:layout_constraintTop_toBottomOf="@+id/upload5" />
     <View
         android:id="@+id/nav"
         android:layout_width="match_parent"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".StudentLogin">
 
     <View
         android:id="@+id/view3"
@@ -110,13 +110,13 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/studentLogin"
+            android:id="@+id/adminLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:padding="8dp"
-            android:text="Go to Student Login Page"
+            android:text="Go to Admin Login Page"
             android:textAlignment="center"
             android:textColor="@color/lavender"
             android:textSize="18sp" />

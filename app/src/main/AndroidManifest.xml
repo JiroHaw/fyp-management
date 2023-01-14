@@ -19,10 +19,19 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".UploadPdf" />
-        <activity android:name=".fetchPdf" />
+        <activity android:name=".UploadPdf"
+            android:label="Upload"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".fetchPdf"
+            android:label="List"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".WorkActivity" />
         <activity android:name=".MarkActivity" />
+        <activity android:name=".StudentMainActivity"/>
+        <activity android:name=".StudentMark"/>
+        <activity android:name=".StudentLogin"
+            android:label="Student"/>
+        <activity android:name=".StudentWork"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true"
