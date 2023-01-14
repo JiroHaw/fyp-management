@@ -81,7 +81,7 @@
             android:textColor="@color/black" />
 
         <CheckBox
-            android:id="@+id/remember"
+            android:id="@+id/remember1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

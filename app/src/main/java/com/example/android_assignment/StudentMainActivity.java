@@ -36,7 +36,7 @@ public class StudentMainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(StudentMainActivity.this, StudentLogin.class));
-                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences preferences = getSharedPreferences("checkbox1", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember1", "false");
                 editor.apply();

@@ -51,7 +51,7 @@ public class StudentLogin extends AppCompatActivity {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        remember1 = findViewById(R.id.remember);
+        remember1 = findViewById(R.id.remember1);
         signupRedirectText = findViewById(R.id.signUpRedirectText);
         adminLogin = findViewById(R.id.adminLogin);
 
@@ -134,10 +134,10 @@ public class StudentLogin extends AppCompatActivity {
                     }
                 });
 
-        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-        String checkbox = preferences.getString("remember", "");
+        SharedPreferences preferences = getSharedPreferences("checkbox1", MODE_PRIVATE);
+        String checkbox1 = preferences.getString("remember1", "");
 
-        if (checkbox.equals("true")) {
+        if (checkbox1.equals("true")) {
             startActivity(new Intent(StudentLogin.this, StudentMainActivity.class));
         } else {
             Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT).show();
@@ -147,13 +147,13 @@ public class StudentLogin extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (compoundButton.isChecked()) {
-                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences preferences = getSharedPreferences("checkbox1", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("remember1", "true");
                     editor.apply();
                     Toast.makeText(StudentLogin.this, "checked", Toast.LENGTH_SHORT).show();
                 } else if (!compoundButton.isChecked()) {
-                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences preferences = getSharedPreferences("checkbox1", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("remember1", "false");
                     editor.apply();

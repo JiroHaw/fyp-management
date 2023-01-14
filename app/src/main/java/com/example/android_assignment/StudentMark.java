@@ -31,10 +31,10 @@ public class StudentMark extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(StudentMark.this, LoginActivity.class));
-                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                startActivity(new Intent(StudentMark.this, StudentLogin.class));
+                SharedPreferences preferences = getSharedPreferences("checkbox1", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("remember", "false");
+                editor.putString("remember1", "false");
                 editor.apply();
                 finish();
             }

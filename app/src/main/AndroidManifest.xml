@@ -20,11 +20,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".UploadPdf"
-            android:label="Upload"
-            android:parentActivityName=".MainActivity"/>
+            android:label="Upload"/>
         <activity android:name=".fetchPdf"
-            android:label="List"
-            android:parentActivityName=".MainActivity" />
+            android:label="List"/>
         <activity android:name=".WorkActivity" />
         <activity android:name=".MarkActivity" />
         <activity android:name=".StudentMainActivity"/>
