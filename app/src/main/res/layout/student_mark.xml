@@ -144,6 +144,7 @@
                 android:background="@drawable/shape"
                 android:lineHeight="32dp"
                 android:padding="20dp"
+
                 android:text="Title: FYP Poster\nMarks:"
                 android:textColor="@color/white"
                 android:textSize="20dp"
