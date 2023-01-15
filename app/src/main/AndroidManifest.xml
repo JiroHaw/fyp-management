@@ -40,9 +40,12 @@
             android:label="Calendar" />
         <activity
             android:name=".DailyCalendarActivity"
-            android:exported="true" />
-        <activity android:name=".EventEditActivity" />
-        <activity android:name=".WeekViewActivity" />
+            android:exported="true"
+            android:label="Calendar"/>
+        <activity android:name=".EventEditActivity"
+            android:label="Calendar"/>
+        <activity android:name=".WeekViewActivity"
+            android:label="Calendar"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true"
