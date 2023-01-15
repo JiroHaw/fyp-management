@@ -5,4 +5,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="titlename"><u>Title Name</u></string>
     <string name="idcode"><u>ID Code</u></string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
 </resources>

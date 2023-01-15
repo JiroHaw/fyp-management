@@ -3,6 +3,8 @@ package com.example.android_assignment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -136,5 +138,23 @@ public class MarkActivity extends AppCompatActivity {
                 startActivity(new Intent(MarkActivity.this, MarkActivity.class));
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_action_bar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.calculator:
+                startActivity(new Intent(MarkActivity.this, Calculator.class));
+                break;
+            case R.id.calendar:
+                startActivity(new Intent(MarkActivity.this, Calendar.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

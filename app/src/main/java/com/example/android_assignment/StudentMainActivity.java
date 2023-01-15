@@ -125,7 +125,7 @@ public class StudentMainActivity extends AppCompatActivity {
                 startActivity(new Intent(StudentMainActivity.this, Calculator.class));
                 break;
             case R.id.calendar:
-                Toast.makeText(this, "calendar", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(StudentMainActivity.this, Calendar.class));
                 break;
         }
         return super.onOptionsItemSelected(item);

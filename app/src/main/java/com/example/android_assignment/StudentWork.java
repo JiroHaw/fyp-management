@@ -3,9 +3,12 @@ package com.example.android_assignment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -57,5 +60,23 @@ public class StudentWork extends AppCompatActivity {
                 startActivity(new Intent(StudentWork.this, StudentWork.class));
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_action_bar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.calculator:
+                startActivity(new Intent(StudentWork.this, Calculator.class));
+                break;
+            case R.id.calendar:
+                startActivity(new Intent(StudentWork.this, Calendar.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
